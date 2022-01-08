@@ -1,0 +1,5 @@
+yt(){
+	source $DOT/pi/bin/activate
+	yt-dlp $1
+	deactivate
+}
