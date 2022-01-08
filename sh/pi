@@ -1,0 +1,3 @@
+pi(){
+	source $DOT/pi/bin/activate
+}

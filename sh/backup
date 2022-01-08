@@ -1,0 +1,6 @@
+backup(){
+	BACK=$(pwd)
+	cd $HOME
+	tar -cjf ed.tar .vimrc .tmux.conf .tmux .vim
+	cd $BACK
+}
