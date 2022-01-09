@@ -1,0 +1,23 @@
+VER=8.2.4045
+VER=8.2.4046
+INSTALL_DIR=vim-$VER
+curl https://codeload.github.com/vim/vim/zip/refs/tags/v$VER -o vim.zip
+unzip vim.zip
+cd $INSTALL_DIR/ 
+./configure \*/
+--enable-multibyte \*/
+--with-features=huge \*/
+--with-python3-config-dir=$(python3.10-config --configdir) \*/
+--enable-python3interp \*/
+--enable-cscope \*/
+--enable-perlinterp \*/
+--enable-rubyinterp \*/
+--prefix=/usr/local
+
+make
+sudo make install
+sudo rm /usr/local/bin/v
+sudo ln -s /usr/local/bin/vim /usr/local/bin/v
+cd ..
+rm -rf ./$INSTALL_DIR
+rm ./vim.zip
