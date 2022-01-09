@@ -1,5 +1,5 @@
 yt(){
 	source $DOT/pi/bin/activate
-	yt-dlp $1
+	yt-dlp $1 -o $HOME/Movies/YOUTUBE/"%(name).%(ext)"
 	deactivate
 }
