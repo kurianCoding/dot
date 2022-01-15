@@ -6,6 +6,6 @@ backup(){
 		nohup tar -cjf ed.tar .vimrc .tmux.conf .tmux .vim >> nohup.out 2>&1 &
 		cd $BACK
 	else
-		nohup tar -cjf $HOME/backup/$1-$(date +%Y-%m-%d).tar $HOME/$1 >> ~/nohup.out 2>&1 &
+		nohup tar -C $HOME/$1 -cjf $HOME/backup/$1-$(date +%Y-%m-%d).tar .  >> ~/nohup.out 2>&1 &
 	fi 
 }
