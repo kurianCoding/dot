@@ -1,6 +1,6 @@
 2mp3(){
 	for f in file $1/*/*.flac;
 	do
-		ffmpeg -i $f -ab 320k -map_metadata 0 -id3v2_version 3  "$(basename --  $f|cut -f 1 -d '.').mp3";
+		ffmpeg -i $f -ab 320k -map_metadata 0 -id3v2_version 3  "$(basename --  ${f%.*}).mp3";
 	done
 }
