@@ -1,5 +1,5 @@
 yt(){
-	source $DOT/pi/bin/activate
-	nohup yt-dlp $1 -o $HOME/Movies/YOUTUBE/"%(title)s.%(ext)s" >> ~/youtube.out 2>&1 &
+	source $HOME/pi/bin/activate
+	nohup yt-dlp $1 -f 136 -o $HOME/Movies/YOUTUBE/"%(title)s.%(ext)s" >> ~/youtube.out 2>&1 &
 	deactivate
 }
