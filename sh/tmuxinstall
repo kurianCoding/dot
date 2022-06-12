@@ -1,0 +1,12 @@
+rtmux(){
+	curl "${1}" -Lo tmux.tar.gz
+	tar -xvf tmux.tar.gz
+	ls -al|grep "tmux-"
+	read filename
+	cd $filename
+	./configure --prefix=/usr/local --enable-utf8proc
+	sudo make install
+	cd ..
+	rm -rf $filename
+	rm tmux.tar.gz
+}
