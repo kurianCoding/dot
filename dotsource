@@ -1,0 +1,6 @@
+DOT=$HOME/dot
+source $DOT/sh/tmux        # tmux
+source $DOT/sh/pi          # pi
+source $DOT/sh/yt-dlp      # yotube downloader
+source $DOT/sh/viminstall  # viminstall
+source $DOT/sh/tmuxinstall # viminstall
